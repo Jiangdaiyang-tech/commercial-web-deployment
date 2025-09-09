@@ -1,5 +1,5 @@
 // 认证页面JavaScript功能
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // 初始化AOS动画
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const togglePassword = (buttonId, inputId) => {
         const button = document.getElementById(buttonId);
         const input = document.getElementById(inputId);
-        
+
         if (button && input) {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
                 input.setAttribute('type', type);
-                
+
                 const icon = this.querySelector('i');
                 if (type === 'password') {
                     icon.classList.remove('fa-eye-slash');
@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
     const strengthFill = document.getElementById('strengthFill');
     const strengthText = document.getElementById('strengthText');
-    
+
     if (passwordInput && strengthFill && strengthText) {
-        passwordInput.addEventListener('input', function() {
+        passwordInput.addEventListener('input', function () {
             const password = this.value;
             const strength = calculatePasswordStrength(password);
             updatePasswordStrength(strength, strengthFill, strengthText);
@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (registerForm) {
         registerForm.addEventListener('submit', handleRegister);
-        
+
         // 实时验证
         const confirmPasswordInput = document.getElementById('confirmPassword');
         if (confirmPasswordInput && passwordInput) {
-            confirmPasswordInput.addEventListener('input', function() {
+            confirmPasswordInput.addEventListener('input', function () {
                 validatePasswordMatch(passwordInput.value, this.value, this);
             });
         }
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 邮箱格式验证
         const emailInput = document.getElementById('email');
         if (emailInput) {
-            emailInput.addEventListener('blur', function() {
+            emailInput.addEventListener('blur', function () {
                 validateEmail(this.value, this);
             });
         }
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 手机号验证
         const phoneInput = document.getElementById('phone');
         if (phoneInput) {
-            phoneInput.addEventListener('input', function() {
+            phoneInput.addEventListener('input', function () {
                 // 只允许输入数字
                 this.value = this.value.replace(/\D/g, '');
                 if (this.value.length > 11) {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            phoneInput.addEventListener('blur', function() {
+            phoneInput.addEventListener('blur', function () {
                 validatePhone(this.value, this);
             });
         }
@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // 密码强度计算
 function calculatePasswordStrength(password) {
     let strength = 0;
-    
+
     if (password.length >= 8) strength += 1;
     if (password.match(/[a-z]+/)) strength += 1;
     if (password.match(/[A-Z]+/)) strength += 1;
     if (password.match(/[0-9]+/)) strength += 1;
     if (password.match(/[$@#&!]+/)) strength += 1;
-    
+
     return strength;
 }
 
@@ -111,10 +111,10 @@ function calculatePasswordStrength(password) {
 function updatePasswordStrength(strength, fillElement, textElement) {
     const percentage = (strength / 5) * 100;
     fillElement.style.width = `${percentage}%`;
-    
+
     const strengthTexts = ['很弱', '弱', '一般', '强', '很强'];
     const strengthColors = ['#dc3545', '#fd7e14', '#ffc107', '#20c997', '#28a745'];
-    
+
     if (strength > 0) {
         textElement.textContent = `密码强度：${strengthTexts[strength - 1]}`;
         fillElement.style.background = strengthColors[strength - 1];
@@ -128,7 +128,7 @@ function updatePasswordStrength(strength, fillElement, textElement) {
 function validateEmail(email, inputElement) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isValid = emailRegex.test(email);
-    
+
     if (email && !isValid) {
         showFieldError(inputElement, '请输入有效的邮箱地址');
     } else if (email && isValid) {
@@ -136,7 +136,7 @@ function validateEmail(email, inputElement) {
     } else {
         clearFieldValidation(inputElement);
     }
-    
+
     return isValid;
 }
 
@@ -144,7 +144,7 @@ function validateEmail(email, inputElement) {
 function validatePhone(phone, inputElement) {
     const phoneRegex = /^1[3-9]\d{9}$/;
     const isValid = phoneRegex.test(phone);
-    
+
     if (phone && !isValid) {
         showFieldError(inputElement, '请输入有效的手机号码');
     } else if (phone && isValid) {
@@ -152,7 +152,7 @@ function validatePhone(phone, inputElement) {
     } else {
         clearFieldValidation(inputElement);
     }
-    
+
     return isValid;
 }
 
@@ -174,7 +174,7 @@ function validatePasswordMatch(password, confirmPassword, inputElement) {
 function showFieldError(inputElement, message) {
     inputElement.classList.remove('is-valid');
     inputElement.classList.add('is-invalid');
-    
+
     let feedback = inputElement.parentElement.parentElement.querySelector('.invalid-feedback');
     if (!feedback) {
         feedback = document.createElement('div');
@@ -182,7 +182,7 @@ function showFieldError(inputElement, message) {
         inputElement.parentElement.parentElement.appendChild(feedback);
     }
     feedback.textContent = message;
-    
+
     // 移除成功反馈
     const validFeedback = inputElement.parentElement.parentElement.querySelector('.valid-feedback');
     if (validFeedback) {
@@ -194,7 +194,7 @@ function showFieldError(inputElement, message) {
 function showFieldSuccess(inputElement, message) {
     inputElement.classList.remove('is-invalid');
     inputElement.classList.add('is-valid');
-    
+
     let feedback = inputElement.parentElement.parentElement.querySelector('.valid-feedback');
     if (!feedback) {
         feedback = document.createElement('div');
@@ -202,7 +202,7 @@ function showFieldSuccess(inputElement, message) {
         inputElement.parentElement.parentElement.appendChild(feedback);
     }
     feedback.textContent = message;
-    
+
     // 移除错误反馈
     const invalidFeedback = inputElement.parentElement.parentElement.querySelector('.invalid-feedback');
     if (invalidFeedback) {
@@ -213,10 +213,10 @@ function showFieldSuccess(inputElement, message) {
 // 清除字段验证状态
 function clearFieldValidation(inputElement) {
     inputElement.classList.remove('is-valid', 'is-invalid');
-    
+
     const validFeedback = inputElement.parentElement.parentElement.querySelector('.valid-feedback');
     const invalidFeedback = inputElement.parentElement.parentElement.querySelector('.invalid-feedback');
-    
+
     if (validFeedback) validFeedback.remove();
     if (invalidFeedback) invalidFeedback.remove();
 }
@@ -224,7 +224,7 @@ function clearFieldValidation(inputElement) {
 // 处理登录表单提交
 function handleLogin(event) {
     event.preventDefault();
-    
+
     const formData = new FormData(event.target);
     const loginData = {
         account: formData.get('loginAccount') || document.getElementById('loginAccount').value,
@@ -234,12 +234,12 @@ function handleLogin(event) {
 
     // 表单验证
     let isValid = true;
-    
+
     if (!loginData.account) {
         showFieldError(document.getElementById('loginAccount'), '请输入邮箱或用户名');
         isValid = false;
     }
-    
+
     if (!loginData.password) {
         showFieldError(document.getElementById('loginPassword'), '请输入密码');
         isValid = false;
@@ -272,7 +272,7 @@ function handleLogin(event) {
 // 处理注册表单提交
 function handleRegister(event) {
     event.preventDefault();
-    
+
     const formData = new FormData(event.target);
     const registerData = {
         firstName: formData.get('firstName') || document.getElementById('firstName').value,
@@ -289,46 +289,46 @@ function handleRegister(event) {
 
     // 表单验证
     let isValid = true;
-    
+
     if (!registerData.firstName) {
         showFieldError(document.getElementById('firstName'), '请输入姓氏');
         isValid = false;
     }
-    
+
     if (!registerData.lastName) {
         showFieldError(document.getElementById('lastName'), '请输入名字');
         isValid = false;
     }
-    
+
     if (!registerData.email || !validateEmail(registerData.email, document.getElementById('email'))) {
         if (!document.getElementById('email').classList.contains('is-invalid')) {
             showFieldError(document.getElementById('email'), '请输入有效的邮箱地址');
         }
         isValid = false;
     }
-    
+
     if (!registerData.phone || !validatePhone(registerData.phone, document.getElementById('phone'))) {
         if (!document.getElementById('phone').classList.contains('is-invalid')) {
             showFieldError(document.getElementById('phone'), '请输入有效的手机号码');
         }
         isValid = false;
     }
-    
+
     if (!registerData.password || calculatePasswordStrength(registerData.password) < 2) {
         showFieldError(document.getElementById('password'), '密码强度太弱，请设置更复杂的密码');
         isValid = false;
     }
-    
+
     if (registerData.password !== registerData.confirmPassword) {
         showFieldError(document.getElementById('confirmPassword'), '两次输入的密码不一致');
         isValid = false;
     }
-    
+
     if (!registerData.researchField) {
         showFieldError(document.getElementById('researchField'), '请选择您的研究领域');
         isValid = false;
     }
-    
+
     if (!registerData.agreeTerms) {
         showError('请阅读并同意服务条款和隐私政策');
         isValid = false;
@@ -362,7 +362,7 @@ function handleRegister(event) {
 function showSuccess(message) {
     const alert = createAlert('success', message);
     document.body.appendChild(alert);
-    
+
     setTimeout(() => {
         alert.remove();
     }, 5000);
@@ -372,7 +372,7 @@ function showSuccess(message) {
 function showError(message) {
     const alert = createAlert('danger', message);
     document.body.appendChild(alert);
-    
+
     setTimeout(() => {
         alert.remove();
     }, 5000);
@@ -388,12 +388,12 @@ function createAlert(type, message) {
         ${message}
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
-    
+
     // 添加动画
     setTimeout(() => {
         alertDiv.classList.add('show');
     }, 100);
-    
+
     return alertDiv;
 }
 
@@ -423,22 +423,22 @@ function debounce(func, wait) {
 }
 
 // 添加实时验证事件监听器
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // 为所有必填字段添加实时验证
     const requiredFields = document.querySelectorAll('input[required], select[required]');
-    
+
     requiredFields.forEach(field => {
         // 失去焦点时验证
-        field.addEventListener('blur', function() {
+        field.addEventListener('blur', function () {
             if (this.value.trim() === '') {
                 showFieldError(this, '此字段为必填项');
             } else {
                 clearFieldValidation(this);
             }
         });
-        
+
         // 输入时清除错误状态
-        field.addEventListener('input', function() {
+        field.addEventListener('input', function () {
             if (this.classList.contains('is-invalid') && this.value.trim() !== '') {
                 clearFieldValidation(this);
             }
@@ -447,13 +447,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 社交登录处理
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     if (event.target.closest('.social-login .btn')) {
         const button = event.target.closest('.btn');
         const provider = button.textContent.includes('Google') ? 'Google' : 'Microsoft';
-        
+
         showSuccess(`正在跳转到 ${provider} 登录页面...`);
-        
+
         // 模拟社交登录跳转
         setTimeout(() => {
             // 这里应该跳转到实际的OAuth URL
@@ -463,7 +463,7 @@ document.addEventListener('click', function(event) {
 });
 
 // 键盘事件处理
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     // Enter键提交表单
     if (event.key === 'Enter' && event.target.matches('input')) {
         const form = event.target.closest('form');
@@ -477,10 +477,10 @@ document.addEventListener('keydown', function(event) {
 });
 
 // 页面离开前确认
-window.addEventListener('beforeunload', function(event) {
+window.addEventListener('beforeunload', function (event) {
     const forms = document.querySelectorAll('form');
     let hasUnsavedChanges = false;
-    
+
     forms.forEach(form => {
         const inputs = form.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
@@ -489,7 +489,7 @@ window.addEventListener('beforeunload', function(event) {
             }
         });
     });
-    
+
     if (hasUnsavedChanges) {
         event.preventDefault();
         event.returnValue = '您有未保存的更改，确定要离开此页面吗？';

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
+
 <body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
@@ -55,67 +57,158 @@
     <!-- 模拟计算主页面 -->
     <section class="simulation-hero">
         <div class="container">
-            <div class="hero-content text-center text-white">
-                <h1 class="display-4 mb-4" data-aos="fade-up">模拟计算</h1>
-                <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                    <p class="lead">六大分类</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="page-title">仿真专区</h1>
+                    <p class="service-subtitle">Simulation Zone</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 六大分类 -->
-    <section class="categories-section py-5">
+    <!-- 仿真服务 -->
+    <section class="py-5 bg-white">
         <div class="container">
             <div class="row g-4">
-                <!-- 第一行 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-atom"></i>
+                <!-- 分子动力学 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="simulation-card h-100">
+                        <div class="sim-image">
+                            <img src="网页素材/网页素材/分子动力学.png" alt="分子动力学" class="img-fluid">
                         </div>
-                        <div class="category-content">
-                            <h3>第一性原理</h3>
-                            <div class="category-description">
-                                <p>基于量子力学的第一性原理计算，包括：</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> 材料结构分析</li>
-                                    <li><i class="fas fa-check"></i> 电子结构计算</li>
-                                    <li><i class="fas fa-check"></i> 化学反应路径</li>
-                                    <li><i class="fas fa-check"></i> 表面性质研究</li>
+                        <div class="sim-content">
+                            <h4>分子动力学</h4>
+                            <p class="text-muted mb-3">通过模拟分子和原子的运动来研究材料的物理性质</p>
+                            <div class="case-studies">
+                                <h6>案例展示：</h6>
+                                <ul class="list-unstyled">
+                                    <li>• 蛋白质折叠动力学研究</li>
+                                    <li>• 纳米材料界面性质</li>
+                                    <li>• 聚合物链构象分析</li>
                                 </ul>
-                            </div>
-                            <div class="category-buttons">
-                                <button class="btn btn-outline-primary">立即咨询</button>
-                                <button class="btn btn-primary">了解详情</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-flask"></i>
+                <!-- 有限元分析 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="simulation-card h-100">
+                        <div class="sim-image">
+                            <img src="网页素材/网页素材/有限元.png" alt="有限元分析" class="img-fluid">
                         </div>
-                        <div class="category-content">
-                            <h3>分子动力学</h3>
-                            <div class="category-description">
-                                <p>基于经典力学的分子动力学模拟：</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> 分子运动模拟</li>
-                                    <li><i class="fas fa-check"></i> 热力学性质计算</li>
-                                    <li><i class="fas fa-check"></i> 相变过程分析</li>
-                                    <li><i class="fas fa-check"></i> 材料力学性能</li>
+                        <div class="sim-content">
+                            <h4>有限元分析</h4>
+                            <p class="text-muted mb-3">用数值方法求解工程和数学物理问题的强大工具</p>
+                            <div class="case-studies">
+                                <h6>案例展示：</h6>
+                                <ul class="list-unstyled">
+                                    <li>• 结构力学强度分析</li>
+                                    <li>• 热传导问题求解</li>
+                                    <li>• 流体力学仿真</li>
                                 </ul>
-                            </div>
-                            <div class="category-buttons">
-                                <button class="btn btn-outline-primary">立即咨询</button>
-                                <button class="btn btn-primary">了解详情</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 能带计算 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="simulation-card h-100">
+                        <div class="sim-image">
+                            <img src="网页素材/网页素材/能带.jpg" alt="能带计算" class="img-fluid">
+                        </div>
+                        <div class="sim-content">
+                            <h4>能带计算</h4>
+                            <p class="text-muted mb-3">计算固体材料的电子能带结构和电子性质</p>
+                            <div class="case-studies">
+                                <h6>案例展示：</h6>
+                                <ul class="list-unstyled">
+                                    <li>• 半导体能隙计算</li>
+                                    <li>• 金属导电性分析</li>
+                                    <li>• 新材料设计优化</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 相图计算 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="simulation-card h-100">
+                        <div class="sim-image">
+                            <img src="网页素材/网页素材/相图计算.png" alt="相图计算" class="img-fluid">
+                        </div>
+                        <div class="sim-content">
+                            <h4>相图计算</h4>
+                            <p class="text-muted mb-3">计算材料在不同条件下的相变和相平衡</p>
+                            <div class="case-studies">
+                                <h6>案例展示：</h6>
+                                <ul class="list-unstyled">
+                                    <li>• 合金相变分析</li>
+                                    <li>• 高温高压相图</li>
+                                    <li>• 材料稳定性预测</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 反应机理 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="simulation-card h-100">
+                        <div class="sim-image">
+                            <img src="网页素材/网页素材/反应机理.png" alt="反应机理" class="img-fluid">
+                        </div>
+                        <div class="sim-content">
+                            <h4>反应机理</h4>
+                            <p class="text-muted mb-3">研究化学反应的详细过程和机理路径</p>
+                            <div class="case-studies">
+                                <h6>案例展示：</h6>
+                                <ul class="list-unstyled">
+                                    <li>• 催化反应机理</li>
+                                    <li>• 过渡态理论计算</li>
+                                    <li>• 反应路径优化</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 态密度计算 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="simulation-card h-100">
+                        <div class="sim-image">
+                            <img src="网页素材/网页素材/态密度1.png" alt="态密度计算" class="img-fluid">
+                        </div>
+                        <div class="sim-content">
+                            <h4>态密度计算</h4>
+                            <p class="text-muted mb-3">计算材料的电子态密度分布和电子结构</p>
+                            <div class="case-studies">
+                                <h6>案例展示：</h6>
+                                <ul class="list-unstyled">
+                                    <li>• 费米能级分析</li>
+                                    <li>• 电子局域化研究</li>
+                                    <li>• 化学键性质分析</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系预约 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="booking-section text-center">
+                <h4>专业仿真服务，助力科研突破</h4>
+                <p class="text-muted mb-4">我们提供全方位的仿真计算服务，帮助您深入理解材料性质和反应机理</p>
+                <a href="#" class="btn btn-primary btn-lg">立即咨询</a>
+            </div>
+        </div>
+    </section>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="category-card">
@@ -310,7 +403,7 @@
                         <div class="booking-info">
                             <h3>专业计算团队</h3>
                             <p class="lead">我们拥有丰富经验的计算科学家团队，为您提供高质量的模拟计算服务。</p>
-                            
+
                             <div class="service-features">
                                 <div class="feature-item">
                                     <i class="fas fa-award"></i>
@@ -319,7 +412,7 @@
                                         <p>博士级别计算专家，确保结果准确性</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <i class="fas fa-rocket"></i>
                                     <div>
@@ -327,7 +420,7 @@
                                         <p>先进计算资源，快速完成复杂计算</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <i class="fas fa-shield-alt"></i>
                                     <div>
@@ -338,7 +431,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="contact-form">
                             <h4>立即咨询</h4>
@@ -347,12 +440,12 @@
                                     <label class="form-label">姓名</label>
                                     <input type="text" class="form-control" required>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label class="form-label">联系电话</label>
                                     <input type="tel" class="form-control" required>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label class="form-label">研究领域</label>
                                     <select class="form-select" required>
@@ -363,12 +456,12 @@
                                         <option value="engineering">工程学</option>
                                     </select>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label class="form-label">计算需求</label>
                                     <textarea class="form-control" rows="3" placeholder="请详细描述您的计算需求..."></textarea>
                                 </div>
-                                
+
                                 <button type="submit" class="btn btn-primary w-100">提交咨询</button>
                             </form>
                         </div>
@@ -398,4 +491,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

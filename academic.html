@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
+
 <body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
@@ -55,27 +57,209 @@
     <!-- 英思学术主页面 -->
     <section class="academic-hero">
         <div class="container">
-            <div class="hero-content text-center text-white">
-                <h1 class="display-4 mb-4" data-aos="fade-up">英思学术</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="page-title">英思学术</h1>
+                    <p class="service-subtitle">Academic Resources</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 学术内容 -->
-    <section class="academic-content py-5">
+    <section class="py-5 bg-white">
         <div class="container">
-            <!-- 学术干货 -->
-            <div class="content-section mb-5" data-aos="fade-up">
-                <div class="section-header">
-                    <h2><i class="fas fa-graduation-cap"></i> 学术干货</h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <div class="article-card featured">
-                            <div class="article-image">
-                                <img src="网页素材/网页素材/态密度1.png" alt="分子动力学模拟详解" class="img-fluid">
-                                <div class="article-category">教程</div>
+            <div class="row">
+                <!-- 学术干货部分 -->
+                <div class="col-lg-6">
+                    <div class="academic-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-brain me-2"></i>学术干货
+                        </h3>
+                        <p class="section-desc">精选科研方法、技术分享和学术写作指导</p>
+                        
+                        <div class="content-cards">
+                            <!-- 文章1 -->
+                            <div class="content-card">
+                                <div class="card-image">
+                                    <img src="网页素材/网页素材/分子动力学.png" alt="分子动力学教程" class="img-fluid">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">教程</span>
+                                    <h5>分子动力学模拟入门指南</h5>
+                                    <p class="text-muted">从基础理论到软件应用的完整教程</p>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-calendar"></i> 2024-01-15</span>
+                                        <span><i class="far fa-eye"></i> 1.2k</span>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- 文章2 -->
+                            <div class="content-card">
+                                <div class="card-image">
+                                    <img src="网页素材/网页素材/XRD.png" alt="XRD分析" class="img-fluid">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">方法</span>
+                                    <h5>XRD数据分析技巧</h5>
+                                    <p class="text-muted">提高XRD数据处理效率的实用方法</p>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-calendar"></i> 2024-01-10</span>
+                                        <span><i class="far fa-eye"></i> 856</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 文章3 -->
+                            <div class="content-card">
+                                <div class="card-image">
+                                    <img src="网页素材/网页素材/有限元.png" alt="有限元分析" class="img-fluid">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">软件</span>
+                                    <h5>COMSOL有限元分析实战</h5>
+                                    <p class="text-muted">多物理场耦合仿真的实际应用案例</p>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-calendar"></i> 2024-01-08</span>
+                                        <span><i class="far fa-eye"></i> 2.1k</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 文章4 -->
+                            <div class="content-card">
+                                <div class="card-image">
+                                    <img src="网页素材/网页素材/SEM.jpg" alt="SEM技术" class="img-fluid">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">技术</span>
+                                    <h5>SEM样品制备与成像技巧</h5>
+                                    <p class="text-muted">获得高质量SEM图像的关键要点</p>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-calendar"></i> 2024-01-05</span>
+                                        <span><i class="far fa-eye"></i> 1.5k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-primary">查看更多干货</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 期刊推荐部分 -->
+                <div class="col-lg-6">
+                    <div class="academic-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-journal-whills me-2"></i>期刊推荐
+                        </h3>
+                        <p class="section-desc">材料科学领域优质期刊推荐与投稿指导</p>
+                        
+                        <div class="journal-list">
+                            <!-- 期刊1 -->
+                            <div class="journal-card">
+                                <div class="journal-info">
+                                    <h5>Nature Materials</h5>
+                                    <div class="journal-meta">
+                                        <span class="if-score">IF: 43.841</span>
+                                        <span class="journal-category">Q1</span>
+                                        <span class="journal-type">材料科学综合</span>
+                                    </div>
+                                    <p class="journal-desc">材料科学领域顶级期刊，发表突破性研究成果</p>
+                                    <div class="journal-tips">
+                                        <small><i class="fas fa-lightbulb"></i> 投稿建议：创新性强，实验数据完整</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 期刊2 -->
+                            <div class="journal-card">
+                                <div class="journal-info">
+                                    <h5>Advanced Materials</h5>
+                                    <div class="journal-meta">
+                                        <span class="if-score">IF: 32.086</span>
+                                        <span class="journal-category">Q1</span>
+                                        <span class="journal-type">先进材料</span>
+                                    </div>
+                                    <p class="journal-desc">先进功能材料研究的权威期刊</p>
+                                    <div class="journal-tips">
+                                        <small><i class="fas fa-lightbulb"></i> 投稿建议：注重应用前景，数据可视化清晰</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 期刊3 -->
+                            <div class="journal-card">
+                                <div class="journal-info">
+                                    <h5>Journal of Materials Chemistry A</h5>
+                                    <div class="journal-meta">
+                                        <span class="if-score">IF: 14.511</span>
+                                        <span class="journal-category">Q1</span>
+                                        <span class="journal-type">材料化学</span>
+                                    </div>
+                                    <p class="journal-desc">能源和环境材料化学研究专业期刊</p>
+                                    <div class="journal-tips">
+                                        <small><i class="fas fa-lightbulb"></i> 投稿建议：机理分析深入，实验设计合理</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 期刊4 -->
+                            <div class="journal-card">
+                                <div class="journal-info">
+                                    <h5>Acta Materialia</h5>
+                                    <div class="journal-meta">
+                                        <span class="if-score">IF: 9.209</span>
+                                        <span class="journal-category">Q1</span>
+                                        <span class="journal-type">材料科学</span>
+                                    </div>
+                                    <p class="journal-desc">材料科学与工程基础研究期刊</p>
+                                    <div class="journal-tips">
+                                        <small><i class="fas fa-lightbulb"></i> 投稿建议：理论与实验结合，结构性能关系明确</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 期刊5 -->
+                            <div class="journal-card">
+                                <div class="journal-info">
+                                    <h5>Materials Today</h5>
+                                    <div class="journal-meta">
+                                        <span class="if-score">IF: 31.041</span>
+                                        <span class="journal-category">Q1</span>
+                                        <span class="journal-type">材料综合</span>
+                                    </div>
+                                    <p class="journal-desc">材料科学前沿进展综述性期刊</p>
+                                    <div class="journal-tips">
+                                        <small><i class="fas fa-lightbulb"></i> 投稿建议：综述性文章，前瞻性观点</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-primary">查看更多期刊</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="booking-section text-center">
+                <h4>学术交流与合作</h4>
+                <p class="text-muted mb-4">欢迎与我们交流学术问题，分享研究心得，共同推进科学进步</p>
+                <a href="#" class="btn btn-primary btn-lg me-3">学术咨询</a>
+                <a href="#" class="btn btn-outline-primary btn-lg">投稿指导</a>
+            </div>
+        </div>
+    </section>
                             <div class="article-content">
                                 <h4>分子动力学模拟详解</h4>
                                 <p>深入解析分子动力学模拟的基本原理、计算方法和应用实例，从基础概念到高级技巧全面覆盖。</p>
@@ -88,7 +272,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                         <div class="article-card">
                             <div class="article-image">
@@ -108,7 +292,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row g-4 mt-4">
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="article-card compact">
@@ -125,7 +309,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="article-card compact">
                             <div class="article-image">
@@ -141,7 +325,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="article-card compact">
                             <div class="article-image">
@@ -158,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="text-center mt-4">
                     <button class="btn btn-primary">查看更多学术文章</button>
                 </div>
@@ -169,7 +353,7 @@
                 <div class="section-header">
                     <h2><i class="fas fa-book-open"></i> 期刊推荐</h2>
                 </div>
-                
+
                 <div class="row g-4">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                         <div class="journal-card high-impact">
@@ -202,12 +386,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                         <div class="journal-card">
                             <div class="journal-header">
                                 <div class="journal-logo">
-                                    <img src="网页素材/网页素材/网站图片素材/Business strategy.png" alt="Advanced Materials" class="img-fluid">
+                                    <img src="网页素材/网页素材/网站图片素材/Business strategy.png" alt="Advanced Materials"
+                                        class="img-fluid">
                                 </div>
                                 <div class="journal-info">
                                     <h4>Advanced Materials</h4>
@@ -235,7 +420,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="more-journals mt-4">
                     <h5>更多推荐期刊</h5>
                     <div class="row g-3">
@@ -270,7 +455,7 @@
                 <div class="col-lg-8" data-aos="fade-right">
                     <div class="notice-content">
                         <h4 class="text-warning mb-2">
-                            <i class="fas fa-exclamation-triangle"></i> 
+                            <i class="fas fa-exclamation-triangle"></i>
                             重要提醒
                         </h4>
                         <p class="mb-0">
@@ -305,4 +490,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

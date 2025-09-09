@@ -1,14 +1,15 @@
 /* 认证页面样式 (登录/注册) */
 .auth-section {
     min-height: 100vh;
-    padding-top: 76px; /* 导航栏高度 */
+    padding-top: 76px;
+    /* 导航栏高度 */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .auth-bg {
-    background: linear-gradient(135deg, 
-        rgba(102, 126, 234, 0.9), 
-        rgba(118, 75, 162, 0.9)),
+    background: linear-gradient(135deg,
+            rgba(102, 126, 234, 0.9),
+            rgba(118, 75, 162, 0.9)),
         url('../网页素材/网页素材/banner.jpg');
     background-size: cover;
     background-position: center;
@@ -20,9 +21,9 @@
 }
 
 .register-bg {
-    background: linear-gradient(135deg, 
-        rgba(67, 206, 162, 0.9), 
-        rgba(24, 90, 157, 0.9)),
+    background: linear-gradient(135deg,
+            rgba(67, 206, 162, 0.9),
+            rgba(24, 90, 157, 0.9)),
         url('../网页素材/网页素材/banner.png');
 }
 
@@ -372,12 +373,12 @@
     .auth-section {
         padding-top: 76px;
     }
-    
+
     .auth-form-container {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
     }
-    
+
     .auth-form-wrapper {
         margin: 2rem 0;
         background: white;
@@ -390,26 +391,26 @@
         padding: 1.5rem;
         margin: 1rem;
     }
-    
+
     .auth-title {
         font-size: 1.5rem;
     }
-    
+
     .form-options {
         flex-direction: column;
         gap: 1rem;
         align-items: flex-start;
     }
-    
+
     .benefit-item {
         margin-bottom: 1.5rem;
     }
-    
+
     .benefit-icon {
         width: 40px;
         height: 40px;
     }
-    
+
     .benefit-icon i {
         font-size: 1.2rem;
     }
@@ -419,20 +420,20 @@
     .auth-form-wrapper {
         padding: 1rem;
     }
-    
+
     .auth-title {
         font-size: 1.3rem;
     }
-    
+
     .auth-subtitle {
         font-size: 0.9rem;
     }
-    
+
     .service-item,
     .trust-item {
         padding: 0.5rem;
     }
-    
+
     .service-item i,
     .trust-item i {
         font-size: 1.8rem;
@@ -445,6 +446,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -456,6 +458,7 @@
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -467,6 +470,7 @@
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -482,14 +486,33 @@
     animation: slideInFromLeft 0.8s ease-out;
 }
 
-.feature-item:nth-child(2) { animation-delay: 0.1s; }
-.feature-item:nth-child(3) { animation-delay: 0.2s; }
-.feature-item:nth-child(4) { animation-delay: 0.3s; }
+.feature-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
 
-.benefit-item:nth-child(2) { animation-delay: 0.1s; }
-.benefit-item:nth-child(3) { animation-delay: 0.2s; }
-.benefit-item:nth-child(4) { animation-delay: 0.3s; }
-.benefit-item:nth-child(5) { animation-delay: 0.4s; }
+.feature-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.benefit-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.benefit-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.benefit-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.benefit-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
 
 /* 表单验证样式 */
 .form-control.is-valid {
@@ -537,6 +560,11 @@
 }
 
 @keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }

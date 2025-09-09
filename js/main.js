@@ -7,7 +7,7 @@ AOS.init({
 });
 
 // 导航栏滚动效果
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
@@ -31,10 +31,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // 导航栏活动状态
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     let currentSection = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -43,7 +43,7 @@ window.addEventListener('scroll', function() {
             currentSection = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === '#' + currentSection) {
@@ -54,11 +54,11 @@ window.addEventListener('scroll', function() {
 
 // 服务卡片悬停效果
 document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-10px) scale(1.02)';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
 });
@@ -80,9 +80,9 @@ document.querySelectorAll('img[data-src]').forEach(img => {
 });
 
 // 页面加载完成后的动画
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     document.body.classList.add('loaded');
-    
+
     // 添加加载完成的淡入效果
     setTimeout(() => {
         document.querySelectorAll('.hero-banner .banner-content > *').forEach((element, index) => {
@@ -94,16 +94,16 @@ window.addEventListener('load', function() {
 });
 
 // 响应式菜单
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
-    
+
     if (navbarToggler) {
-        navbarToggler.addEventListener('click', function() {
+        navbarToggler.addEventListener('click', function () {
             navbarCollapse.classList.toggle('show');
         });
     }
-    
+
     // 点击菜单项后关闭移动端菜单
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function initSearch() {
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
-    
+
     if (searchInput) {
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function () {
             const query = this.value.toLowerCase();
             if (query.length > 2) {
                 performSearch(query);
@@ -140,19 +140,19 @@ function performSearch(query) {
         { title: '分子动力学计算', type: '模拟计算', price: '¥150.00' },
         { title: '态密度分析', type: '数据分析', price: '¥80.00' }
     ];
-    
-    const filteredResults = mockResults.filter(item => 
-        item.title.toLowerCase().includes(query) || 
+
+    const filteredResults = mockResults.filter(item =>
+        item.title.toLowerCase().includes(query) ||
         item.type.toLowerCase().includes(query)
     );
-    
+
     displaySearchResults(filteredResults);
 }
 
 function displaySearchResults(results) {
     const searchResults = document.getElementById('searchResults');
     if (!searchResults) return;
-    
+
     if (results.length === 0) {
         searchResults.innerHTML = '<div class="search-item">没有找到相关结果</div>';
     } else {
@@ -164,7 +164,7 @@ function displaySearchResults(results) {
             </div>
         `).join('');
     }
-    
+
     searchResults.style.display = 'block';
 }
 
@@ -172,7 +172,7 @@ function displaySearchResults(results) {
 function validateForm(form) {
     const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
     let isValid = true;
-    
+
     inputs.forEach(input => {
         if (!input.value.trim()) {
             showError(input, '此字段为必填项');
@@ -180,7 +180,7 @@ function validateForm(form) {
         } else {
             clearError(input);
         }
-        
+
         // 邮箱验证
         if (input.type === 'email' && input.value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -189,7 +189,7 @@ function validateForm(form) {
                 isValid = false;
             }
         }
-        
+
         // 手机号验证
         if (input.type === 'tel' && input.value) {
             const phoneRegex = /^1[3-9]\d{9}$/;
@@ -199,7 +199,7 @@ function validateForm(form) {
             }
         }
     });
-    
+
     return isValid;
 }
 
@@ -228,7 +228,7 @@ class ShoppingCart {
         this.items = JSON.parse(localStorage.getItem('cart')) || [];
         this.updateCartUI();
     }
-    
+
     addItem(item) {
         const existingItem = this.items.find(i => i.id === item.id);
         if (existingItem) {
@@ -240,13 +240,13 @@ class ShoppingCart {
         this.updateCartUI();
         this.showNotification('商品已添加到购物车');
     }
-    
+
     removeItem(itemId) {
         this.items = this.items.filter(item => item.id !== itemId);
         this.saveCart();
         this.updateCartUI();
     }
-    
+
     updateQuantity(itemId, quantity) {
         const item = this.items.find(i => i.id === itemId);
         if (item) {
@@ -259,15 +259,15 @@ class ShoppingCart {
             }
         }
     }
-    
+
     getTotal() {
         return this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     }
-    
+
     saveCart() {
         localStorage.setItem('cart', JSON.stringify(this.items));
     }
-    
+
     updateCartUI() {
         const cartCount = document.querySelector('.cart-count');
         if (cartCount) {
@@ -276,17 +276,17 @@ class ShoppingCart {
             cartCount.style.display = totalItems > 0 ? 'block' : 'none';
         }
     }
-    
+
     showNotification(message) {
         const notification = document.createElement('div');
         notification.className = 'notification';
         notification.textContent = message;
         document.body.appendChild(notification);
-        
+
         setTimeout(() => {
             notification.classList.add('show');
         }, 100);
-        
+
         setTimeout(() => {
             notification.classList.remove('show');
             setTimeout(() => {
@@ -300,7 +300,7 @@ class ShoppingCart {
 const cart = new ShoppingCart();
 
 // 添加到购物车按钮事件
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.matches('.add-to-cart')) {
         e.preventDefault();
         const card = e.target.closest('.service-card') || e.target.closest('.equipment-card');
@@ -330,18 +330,18 @@ function optimizePerformance() {
                 }
             });
         });
-        
+
         document.querySelectorAll('img[data-src]').forEach(img => {
             imageObserver.observe(img);
         });
     }
-    
+
     // 预加载关键资源
     const preloadLinks = [
         '/css/style.css',
         '/js/main.js'
     ];
-    
+
     preloadLinks.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -352,17 +352,17 @@ function optimizePerformance() {
 }
 
 // 初始化所有功能
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initSearch();
     optimizePerformance();
-    
+
     // 添加页面切换动画
     document.body.classList.add('page-loaded');
 });
 
 // Service Worker注册（PWA支持）
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         navigator.serviceWorker.register('/sw.js')
             .then(registration => {
                 console.log('SW registered: ', registration);

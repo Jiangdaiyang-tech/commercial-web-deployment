@@ -19,15 +19,22 @@
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cloud-banner {
@@ -85,7 +92,7 @@
 .process-person img {
     max-width: 150px;
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -111,14 +118,14 @@
     padding: 30px 20px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     height: 100%;
 }
 
 .flow-step:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .flow-icon {
@@ -164,14 +171,14 @@
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     height: 100%;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
@@ -236,8 +243,15 @@
 }
 
 @keyframes shimmer {
-    0%, 100% { transform: translateX(-100%); }
-    50% { transform: translateX(100%); }
+
+    0%,
+    100% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
 }
 
 .booking-info {
@@ -329,14 +343,14 @@
     background: white;
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
 }
 
 .qr-code-section img {
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -350,49 +364,49 @@
         padding: 120px 0 40px;
         text-align: center;
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .process-illustration {
         padding: 20px 0;
     }
-    
+
     .process-person,
     .equipment-showcase {
         margin-bottom: 20px;
     }
-    
+
     .flow-icon {
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
     }
-    
+
     .project-image {
         height: 150px;
     }
-    
+
     .project-info h6 {
         height: auto;
         min-height: 2.5rem;
     }
-    
+
     .contact-methods {
         padding: 20px;
     }
-    
+
     .method-item {
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
     }
-    
+
     .method-item i {
         margin-bottom: 10px;
     }
-    
+
     .method-item:hover {
         transform: translateY(-5px);
     }
@@ -402,15 +416,15 @@
     .hero-content h1 {
         font-size: 2rem;
     }
-    
+
     .cloud-banner {
         padding: 20px;
     }
-    
+
     .booking-section .row {
         flex-direction: column-reverse;
     }
-    
+
     .qr-code-section {
         margin-bottom: 30px;
     }
