@@ -1,0 +1,417 @@
+/* 云现场页面专用样式 */
+.cloud-scene-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cloud-scene-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cloud-banner {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cloud-banner h2 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list i {
+    color: #4CAF50;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.hero-image img {
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+}
+
+/* 服务流程样式 */
+.service-flow {
+    background: #f8f9fa;
+}
+
+.process-illustration {
+    position: relative;
+    padding: 40px 0;
+}
+
+.process-person {
+    text-align: center;
+    padding: 20px;
+}
+
+.process-person img {
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.process-person:hover img {
+    transform: scale(1.1);
+}
+
+.equipment-showcase {
+    text-align: center;
+    padding: 20px;
+}
+
+.equipment-showcase img {
+    max-height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.equipment-showcase:hover img {
+    transform: scale(1.02);
+}
+
+.flow-step {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.flow-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.flow-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.flow-step:hover .flow-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.flow-step h5 {
+    font-weight: 600;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.flow-step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 支持项目样式 */
+.supported-projects {
+    background: #f8f9fa;
+}
+
+.projects-grid {
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h6 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.4;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.project-info .btn {
+    width: 100%;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-info .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* 预约方式样式 */
+.booking-section {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 123, 255, 0.03) 50%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+.booking-info {
+    position: relative;
+    z-index: 2;
+}
+
+.booking-info h2 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-methods {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.method-item:last-child {
+    border-bottom: none;
+}
+
+.method-item:hover {
+    transform: translateX(10px);
+}
+
+.method-item i {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.method-item span {
+    color: #333;
+    font-weight: 500;
+}
+
+.service-promise {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.service-promise h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.promise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.promise-list li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.promise-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.qr-code-section {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.qr-code-section img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.qr-code-section:hover img {
+    transform: scale(1.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .cloud-scene-hero {
+        padding: 120px 0 40px;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .process-illustration {
+        padding: 20px 0;
+    }
+    
+    .process-person,
+    .equipment-showcase {
+        margin-bottom: 20px;
+    }
+    
+    .flow-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .project-image {
+        height: 150px;
+    }
+    
+    .project-info h6 {
+        height: auto;
+        min-height: 2.5rem;
+    }
+    
+    .contact-methods {
+        padding: 20px;
+    }
+    
+    .method-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .method-item i {
+        margin-bottom: 10px;
+    }
+    
+    .method-item:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .cloud-banner {
+        padding: 20px;
+    }
+    
+    .booking-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .qr-code-section {
+        margin-bottom: 30px;
+    }
+}

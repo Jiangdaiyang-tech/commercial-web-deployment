@@ -1,0 +1,526 @@
+/* 模拟计算页面专用样式 */
+.simulation-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.simulation-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,15 61,35 85,35 67,50 73,74 50,59 27,74 33,50 15,35 39,35" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+    animation: float 20s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 分类卡片样式 */
+.categories-section {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.category-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.category-card:hover::before {
+    left: 100%;
+}
+
+.category-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: white;
+    font-size: 2.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1) rotate(360deg);
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.category-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.category-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.category-description {
+    margin-bottom: 30px;
+}
+
+.category-description p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.feature-list i {
+    color: #28a745;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-buttons .btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.category-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 特殊推荐卡片 */
+.special-highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+}
+
+.special-highlight .category-icon {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.special-highlight:hover .category-icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.special-highlight .category-content h3 {
+    color: white;
+}
+
+.special-highlight .category-description p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.special-highlight .feature-list li {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.special-highlight .feature-list i {
+    color: #4CAF50;
+}
+
+.special-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(15deg);
+    animation: pulse 2s infinite;
+}
+
+/* 案例展示样式 */
+.case-studies {
+    background: #f8f9fa;
+}
+
+.case-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.case-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.case-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.case-card:hover .case-image img {
+    transform: scale(1.1);
+}
+
+.case-content {
+    padding: 30px;
+}
+
+.case-content h4 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.case-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.case-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.detail-item i {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+/* 预约部分样式 */
+.booking-section {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(102, 126, 234, 0.03) 50%, transparent 70%);
+    animation: shimmer 4s ease-in-out infinite;
+}
+
+.booking-content {
+    position: relative;
+    z-index: 2;
+}
+
+.booking-info h3 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-features {
+    margin-top: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: #e9ecef;
+    transform: translateX(10px);
+}
+
+.feature-item i {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.feature-item h5 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* 联系表单样式 */
+.contact-form {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.contact-form h4 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.booking-form .form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.booking-form .form-control,
+.booking-form .form-select {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.booking-form .form-control:focus,
+.booking-form .form-select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1);
+}
+
+.booking-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.booking-form .btn-primary {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.booking-form .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .simulation-hero {
+        padding: 120px 0 50px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .category-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .category-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .case-card {
+        margin-bottom: 20px;
+    }
+    
+    .case-image {
+        height: 150px;
+    }
+    
+    .case-content {
+        padding: 20px;
+    }
+    
+    .case-details {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .feature-item {
+        padding: 15px;
+    }
+    
+    .feature-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        padding: 10px 20px;
+    }
+    
+    .category-card {
+        padding: 25px 15px;
+    }
+    
+    .special-badge {
+        top: -5px;
+        right: -5px;
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .case-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    .booking-info h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes pulse {
+    0% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(15deg) scale(1.05); }
+    100% { transform: rotate(15deg) scale(1); }
+}

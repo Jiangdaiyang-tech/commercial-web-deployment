@@ -1,0 +1,538 @@
+/* 数据分析页面专用样式 */
+.data-analysis-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.data-analysis-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="3" fill="rgba(255,255,255,0.1)"/><rect x="60" y="10" width="4" height="4" fill="rgba(255,255,255,0.1)"/><polygon points="10,70 15,60 20,70" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    animation: float 25s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 分类卡片样式 - 继承simulation.css的样式但添加一些特殊效果 */
+.categories-section {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.category-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.category-card:hover::before {
+    left: 100%;
+}
+
+.category-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: white;
+    font-size: 2.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1) rotate(360deg);
+    background: linear-gradient(135deg, #17a2b8, #138496);
+}
+
+.category-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.category-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.category-description {
+    margin-bottom: 30px;
+}
+
+.category-description p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.feature-list li {
+    padding: 6px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.feature-list i {
+    color: #17a2b8;
+    margin-right: 8px;
+    font-size: 0.7rem;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-buttons .btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.category-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 特殊推荐卡片 */
+.special-highlight {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+    position: relative;
+}
+
+.special-highlight .category-icon {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.special-highlight:hover .category-icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.special-highlight .category-content h3 {
+    color: white;
+}
+
+.special-highlight .category-description p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.special-highlight .feature-list li {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.special-highlight .feature-list i {
+    color: #4CAF50;
+}
+
+.special-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(15deg);
+    animation: pulse 2s infinite;
+}
+
+/* 案例展示样式 */
+.case-studies {
+    background: #f8f9fa;
+}
+
+.case-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.case-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.case-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.case-header h4 {
+    font-weight: 700;
+    color: #333;
+    position: relative;
+}
+
+.case-header h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.case-grid {
+    margin-top: 20px;
+}
+
+.case-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    height: 100%;
+    cursor: pointer;
+}
+
+.case-item:hover {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.case-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.case-item:hover img {
+    transform: scale(1.05);
+}
+
+.case-item h6 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* 预约部分样式 */
+.booking-section {
+    background: white;
+    position: relative;
+}
+
+.booking-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-info h3 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-stats {
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23, 162, 184, 0.3);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.contact-methods {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.contact-methods h4 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.method-list {
+    margin-top: 20px;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.method-item:last-child {
+    border-bottom: none;
+}
+
+.method-item:hover {
+    transform: translateX(10px);
+}
+
+.method-item i {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.method-item:hover i {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.method-item h6 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.method-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .data-analysis-hero {
+        padding: 120px 0 50px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .category-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .feature-list {
+        max-width: 100%;
+    }
+    
+    .category-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .case-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .case-item {
+        padding: 10px;
+    }
+    
+    .case-item img {
+        height: 80px;
+    }
+    
+    .case-item h6 {
+        font-size: 0.8rem;
+    }
+    
+    .stat-item {
+        margin-bottom: 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .contact-methods {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+    
+    .method-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .method-item i {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        padding: 10px 20px;
+    }
+    
+    .category-card {
+        padding: 25px 15px;
+    }
+    
+    .special-badge {
+        top: -5px;
+        right: -5px;
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .case-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    .case-grid .col-6 {
+        margin-bottom: 15px;
+    }
+    
+    .service-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(1deg); }
+    50% { transform: translateY(-8px) rotate(0deg); }
+    75% { transform: translateY(-3px) rotate(-1deg); }
+}
+
+@keyframes pulse {
+    0% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(15deg) scale(1.05); }
+    100% { transform: rotate(15deg) scale(1); }
+}

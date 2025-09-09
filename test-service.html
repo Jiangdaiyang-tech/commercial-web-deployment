@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试服务 - 英思科研</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test-service.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="网页素材/网页素材/网站图片素材/LOGO图层 1.png" alt="英思科研" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cloud-scene.html">云现场</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="test-service.html">测试服务</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="simulation.html">模拟计算</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data-analysis.html">数据分析</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research-drawing.html">科研绘图</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academic.html">英思学术</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav">
+                    <a class="btn btn-outline-primary me-2" href="login.html">登录</a>
+                    <a class="btn btn-primary" href="register.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 测试服务主页面 -->
+    <section class="test-services-hero">
+        <div class="container">
+            <div class="hero-content text-center text-white">
+                <h1 class="display-4 mb-4" data-aos="fade-up">测试服务</h1>
+                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <span class="highlight">可点击商品对应页面</span><br>
+                    <span class="highlight">对关商品</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品展示网格 -->
+    <section class="products-section py-5">
+        <div class="container">
+            <div class="products-grid">
+                <!-- 第一行 -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card" data-id="xps-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/01.png" alt="X射线光电子能谱">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>X射线光电子能谱 (XPS)</h6>
+                                <p class="product-price">¥108.00 <span class="original-price">¥135.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card" data-id="xps-2">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/02.png" alt="X射线光电子能谱">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>X射线光电子能谱 (XPS)</h6>
+                                <p class="product-price">¥108.00 <span class="original-price">¥135.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card" data-id="sem-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/SEM.jpg" alt="扫描电子显微镜">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>扫描电子显微镜 (SEM)</h6>
+                                <p class="product-price">¥42.00 <span class="original-price">¥52.50</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-card" data-id="xrd-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/XRD.png" alt="X射线衍射">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>X射线衍射 (XRD)</h6>
+                                <p class="product-price">¥84.00 <span class="original-price">¥105.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第二行 -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card" data-id="raman-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/拉曼.jpg" alt="拉曼光谱">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>拉曼光谱 (Raman)</h6>
+                                <p class="product-price">¥84.00 <span class="original-price">¥105.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card" data-id="thermal-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/03.png" alt="综合热分析">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>综合热分析 (TG-DSC)</h6>
+                                <p class="product-price">¥105.00 <span class="original-price">¥131.25</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card" data-id="ftir-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/傅里叶光谱.jpg" alt="傅里叶变换红外光谱">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>傅里叶变换红外光谱 (FTIR)</h6>
+                                <p class="product-price">¥60.00 <span class="original-price">¥75.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-card" data-id="spectrum-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/04.png" alt="光谱分析">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>光谱分析</h6>
+                                <p class="product-price">¥90.00 <span class="original-price">¥112.50</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第三行 -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card" data-id="tem-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/STEM.png" alt="透射电子显微镜">
+                                <div class="product-badge new">新品</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>透射电子显微镜 (TEM)</h6>
+                                <p class="product-price">¥150.00 <span class="original-price">¥187.50</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card" data-id="xafs-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/XAFS.jpg" alt="X射线吸收精细结构">
+                                <div class="product-badge hot">热门</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>X射线吸收精细结构 (XAFS)</h6>
+                                <p class="product-price">¥200.00 <span class="original-price">¥250.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card" data-id="sem-2">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/图1.jpg" alt="场发射扫描电镜">
+                                <div class="product-badge recommended">推荐</div>
+                            </div>
+                            <div class="product-info">
+                                <h6>场发射扫描电子显微镜 (FESEM)</h6>
+                                <p class="product-price">¥120.00 <span class="original-price">¥150.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-card" data-id="xps-special">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/XPS.png" alt="特殊XPS测试">
+                                <div class="product-badge special">特价</div>
+                                <div class="discount-overlay">
+                                    <span>限时优惠</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6>高分辨X射线光电子能谱</h6>
+                                <p class="product-price">¥72.00 <span class="original-price">¥96.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">立即抢购</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第四行 -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card" data-id="vacuum-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/真空镀膜.png" alt="真空镀膜">
+                            </div>
+                            <div class="product-info">
+                                <h6>真空镀膜分析</h6>
+                                <p class="product-price">¥180.00 <span class="original-price">¥225.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card" data-id="finite-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/有限元.png" alt="有限元分析">
+                            </div>
+                            <div class="product-info">
+                                <h6>有限元分析</h6>
+                                <p class="product-price">¥160.00 <span class="original-price">¥200.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card" data-id="xrd-2">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/图2.jpg" alt="高温XRD">
+                            </div>
+                            <div class="product-info">
+                                <h6>高温X射线衍射 (HT-XRD)</h6>
+                                <p class="product-price">¥140.00 <span class="original-price">¥175.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-card" data-id="afm-1">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/图3.jpg" alt="原子力显微镜">
+                            </div>
+                            <div class="product-info">
+                                <h6>原子力显微镜 (AFM)</h6>
+                                <p class="product-price">¥200.00 <span class="original-price">¥250.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第五行 -->
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card" data-id="sem-eds">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/图4.jpg" alt="SEM-EDS">
+                            </div>
+                            <div class="product-info">
+                                <h6>扫描电镜能谱联用 (SEM-EDS)</h6>
+                                <p class="product-price">¥95.00 <span class="original-price">¥118.75</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card" data-id="comprehensive">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/图5.jpg" alt="综合分析">
+                            </div>
+                            <div class="product-info">
+                                <h6>综合材料表征分析</h6>
+                                <p class="product-price">¥300.00 <span class="original-price">¥375.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card" data-id="phase-diagram">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/相图计算.png" alt="相图计算">
+                            </div>
+                            <div class="product-info">
+                                <h6>相图计算分析</h6>
+                                <p class="product-price">¥220.00 <span class="original-price">¥275.00</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-card" data-id="molecular-dynamics">
+                            <div class="product-image">
+                                <img src="网页素材/网页素材/分子动力学.png" alt="分子动力学">
+                            </div>
+                            <div class="product-info">
+                                <h6>分子动力学模拟</h6>
+                                <p class="product-price">¥250.00 <span class="original-price">¥312.50</span></p>
+                                <button class="btn btn-primary btn-sm add-to-cart">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约方式 -->
+    <section class="booking-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">预约方式</h2>
+            <div class="booking-methods">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="booking-method text-center">
+                            <div class="method-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h5>在线预约</h5>
+                            <p>通过官网平台快速预约</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="booking-method text-center">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5>电话咨询</h5>
+                            <p>400-123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="booking-method text-center">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>邮件预约</h5>
+                            <p>service@yingsi-research.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="booking-method text-center">
+                            <div class="method-icon">
+                                <i class="fab fa-weixin"></i>
+                            </div>
+                            <h5>微信咨询</h5>
+                            <p>扫码添加客服微信</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 英思科研. 保留所有权利.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">隐私政策</a>
+                    <a href="#" class="text-light me-3">服务条款</a>
+                    <a href="#" class="text-light">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
